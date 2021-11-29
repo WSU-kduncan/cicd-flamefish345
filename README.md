@@ -7,3 +7,11 @@
 # Running the Container
 
 # Viewing a Project
+
+# Creating a DockerHub Public Repo
+
+# DockerHub authentication via CLI
+
+# Configuring GitHub secrets
+
+# Configure GitHub Workflow
