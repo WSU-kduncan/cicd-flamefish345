@@ -14,6 +14,10 @@
 
 - I first login to my EC2 instance and type in the Docker GPG key: 'curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg'
 
+- Now, we will install the latest version of Docker by typing 'sudo apt-get install docker-ce docker-ce-cli containerd.io'
+
+![docker install on ubuntu](project6-1.png)
+
 # Building a Container
 
 # Running the Container
