@@ -8,7 +8,7 @@
 
 - After completing the install, I open the Docker Desktop application and sign in to my Docker account that I already created before writing this READ ME.
 
-
+![Docker Desktop open](dockerdesktop.png)
 
 # Building a Container
 
