@@ -10,6 +10,10 @@
 
 ![Docker Desktop open](dockerdesktop.png)
 
+- Now I am going to install Docker on my EC2 Instance w/ Ubuntu
+
+- I first login to my EC2 instance and type in the Docker GPG key: 'curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg'
+
 # Building a Container
 
 # Running the Container
