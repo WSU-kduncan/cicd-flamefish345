@@ -92,9 +92,3 @@
 # Configuring GitHub secrets
 
 # Configure GitHub Workflow
-
-# Part 3
-
-# Pulling the Project Image
-
-# Running the Project Container
