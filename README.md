@@ -22,9 +22,7 @@
 
 - As per requirements for the project, we shall build a container from a dockerfile. The image required must run Apache 2 to run a simple web page file. 
 
-- I create a folder for my html project and make a folder within the directory for my 'index.html' file.
-
-![html project folder](project6-8.png)
+- I go to my new repository, 'cicd-username' since that is where the Dockerfile should be placed for the project.
 
 - I will start making a dockerfile by using 'vim Dockerfile'.
 
