@@ -20,6 +20,27 @@
 
 # Building a Container
 
+- As per requirements for the project, we shall build a container from a dockerfile. The image required must run Apache 2 to run a simple web page file. 
+
+- I create a folder for my html project and make a folder within the directory for my 'index.html' file.
+
+![html project folder](project6-8.png)
+
+- I will start making a dockerfile by using 'vim Dockerfile'.
+
+- We first add our 'FROM' parameter and we need our image to pull from Docker. For a container with Apache 2, we need to utilize 'httpd' as our image and then specify what version we need, in this case ':2.4' after the image name.
+
+- Next is our 'COPY' parameter where we copy the contents of our folder that contains the 'index.html' file. We have to type in the proper file order that is required for Apache 2 Index files, '/usr/local/apache2/htdocs/'.
+
+- Lastly we have our 'EXPOSE', while unneeded since we will use '-p' in the final build to open the container to all host ports, it is just proper etiquette to signify the desired port for the host to connect to the container.
+
+![Dockerfile in vim](project6-9.png)
+
+- Now we save and exit with ':wq'
+
+- Now we type out 
+
+
 # Running the Container
 
 # Viewing a Project
