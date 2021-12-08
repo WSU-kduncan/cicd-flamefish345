@@ -38,12 +38,28 @@
 
 - Now we save and exit with ':wq'
 
-- Now we type out 
-
-
 # Running the Container
+- We have built our Dockerfile for our http project and now we need to run the container.
+
+- We input the command, 'docker run --rm -dit -p 8080:80 web'. This command will clean up any previous containers made with this Dockerfile, make the container run in the foreground without bringing up a terminal, and utilize port 80 on our host for the ability to view our project in browser. After entering, we will get an output of a container ID.
+
+- We will do a quick 'docker ps -a' to check if our container is running. We will see that the container is running off of an image from our 'web/' folder, was given the command to keep running in the foreground, and that it is bound to port 80 of our host. 
+
+![Dockerfile running](project6-10.png)
 
 # Viewing a Project
+
+- Now to run a couple 'tests' before we view the project in browser.
+
+- First, we will do a quick 'ip a' to get a glimpse at our instance's ip addresses. We wanted to see our docker's ip address to test that the container is working properly.
+
+- We'll test this on the 'loclhost' first, so we'll input the command, 'curl localhost:8080' and this will output the code from our 'index.html' file. We shall do the same for our docker's ip address, 'curl 172.17.0.1:8080' and we should see the same output.
+
+![Running 'ip a' 'curl localhost:8080'](project6-11-1.png)
+
+- Now to view our project in browser, we must type in the address bar our instance's public IPv4 address and the designated bound port on the host. So we type in 'PublicIPv4Address:8080'. This should give us the out of a simple web page that was made in our 'index.html' file.
+
+![Running container in browser](project6-7.png)
 
 # Part 2
 
