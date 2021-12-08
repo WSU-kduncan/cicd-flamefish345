@@ -65,7 +65,29 @@
 
 # Creating a DockerHub Public Repo
 
+- We will now head over to hub.docker.com, login to our account, and then click on the section, 'Repositories'.
+
+- Once in this section, click on 'Create a repository'.
+
+- Next you will be brought to a section where you will give the repo a name, give an optional description, and set the repo to either public view or private view.
+
+![Docker 'Create a Repository' page](project6-12.png)
+
+- Once you are done, click 'Create' and your next screen should be inside your repository. Something like this:
+
+![Docker repo in browser](project6-13.png)
+
 # DockerHub authentication via CLI
+
+- Now to push containers made through our instance to the Docker repo, we need to be logged in to our Docker Hub account on the instance.
+
+- You could easily type 'docker login --username yourusername' but there's a caveat where the password is stored on your system and this could be a potential security issue if someone got a hold of this config file.
+
+- So we are going to create a security key via CLI authenticaton.
+
+- First, go to your Docker Hub account settings. Once there, click on 'Security' and you should see a section called 'Access Tokens'
+
+![Docker Hub Acces Token page](project6-14.png)
 
 # Configuring GitHub secrets
 
