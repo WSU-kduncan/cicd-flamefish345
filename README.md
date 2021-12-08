@@ -55,6 +55,8 @@
 
 ![Running 'ip a' 'curl localhost:8080'](project6-11-1.png)
 
+![Running '172.17.0.1:8080'](project6-11-2.png)
+
 - Now to view our project in browser, we must type in the address bar our instance's public IPv4 address and the designated bound port on the host. So we type in 'PublicIPv4Address:8080'. This should give us the out of a simple web page that was made in our 'index.html' file.
 
 ![Running container in browser](project6-7.png)
