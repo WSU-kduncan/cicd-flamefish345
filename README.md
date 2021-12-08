@@ -83,7 +83,13 @@
 
 - First, go to your Docker Hub account settings. Once there, click on 'Security' and you should see a section called 'Access Tokens'
 
-![Docker Hub Acces Token page](project6-14.png)
+![Docker Hub Access Token page](project6-14.png)
+
+- Click on 'New Access Token' and you be presented with a menu to name your token, the priveleges your token allows to whoever uses it, in this case we'll make it 'Read, Write, & Delete'. Then finally, click 'Generate New Token'. Then it will give you a prompt to save the 'key password' somewhere secure. Once you exit, you will not be able to see this password again. So, make sure to copy this password somewhere safe.
+
+- Your 'Access Keys' page should look something like this, with your key activated.
+
+![Docker Hub Access Token page w/ activated token](project6-15.png)
 
 # Configuring GitHub secrets
 
