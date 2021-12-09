@@ -114,3 +114,15 @@
 - Now with out secrets setup, let's move onto GitHub Actions and Workflows.
 
 - First, either on Visual Studio Code or on your EC2 Instance, go into your repo and create a folder called '.github/', then within '.github/' created another folder called 'workflows'.
+
+# Part 3
+
+# Pulling the image
+
+- We will now run the image from our Docker Repo in our AWS Instance.
+
+- First we need to login to our Docker Hub account with either your password or access key:
+
+![logging into Docker Hub on Ubuntu Instance](project6-18.png)
+
+# Running the container
