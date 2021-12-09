@@ -112,3 +112,5 @@
 # Configure GitHub Workflow
 
 - Now with out secrets setup, let's move onto GitHub Actions and Workflows.
+
+- First, either on Visual Studio Code or on your EC2 Instance, go into your repo and create a folder called '.github/', then within '.github/' created another folder called 'workflows'.
