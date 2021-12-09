@@ -1,5 +1,7 @@
 # Project 6 Documentation
 
+# Part 1
+
 # Installing Docker on Desktop/EC2 Instance
 
 - To install Docker Desktop, I go to https://docs.docker.com/desktop/windows/install/ and on the page I click on 'Docker Desktop for Windows' button to download the installer.
@@ -59,6 +61,8 @@
 
 ![Running container in browser](project-screenshots/project6-7.png)
 
+# Part 2
+
 # Creating a DockerHub Public Repo
 
 - We will now head over to hub.docker.com, login to our account, and then click on the section, 'Repositories'.
@@ -114,6 +118,46 @@
 - Now with out secrets setup, let's move onto GitHub Actions and Workflows.
 
 - First, either on Visual Studio Code or on your EC2 Instance, go into your repo and create a folder called '.github/', then within '.github/' created another folder called 'workflows'.
+
+- This is the proper file path for all of your workflow files if you wish for them to run properly.
+
+- Now create a new file in '.github/workflows' with a name that represents what you want the workflow to do and then end it with '.yml' as all workflow files are in YAML format.
+
+- Editing your '.yml' file in either vim in Ubuntu or Visual Studio Code, start off with 'name:' and give your action a name.
+
+- Next is the 'on' section where if you want to have the action activate on either a 'pull:' or 'push:' to/from GitHub.
+
+- Under your trigger (either 'push:' or 'pull:') you want to add a 'branch:' of where your changes will take effect once the action triggers (this case we'll stick with '[main]').
+
+- For this workflow, we want to push an image to our Docker Hub once a git push happens. We will need to make an 'env:' or environment for our repo. We'll label this 'DOCKER_HUB_REPO:' and you give the name of the repo.
+
+- Next is the 'jobs:' section where you will codify your processes for your action. Our job is pushing an image to a repo, so, we will type something like 'push_to_registry:' underneath 'jobs:' tab.
+
+- Now under our job name, we will give a 'name:' to describe in short wha the job/action is.
+
+- Next is 'runs-on:', where we select our 'runner' for our image. We will be making an Ubuntu image that is the latest version, so, we will type 'ubuntu-latest'.
+
+- Now for 'steps:' where the order of instructions taken to perform the action will take place. You will give each step a 'name:' and it's purpose or 'uses:'.
+
+- The first step is 'actions/checkout@v2' which is version 2 of the 'actions/checkout' action where it checks out the designated repo and makes it available your runner to perform scripts within the designated repo.
+
+- Final step is to push the image to docker hub. So the 'uses:' are 'docker/build-push-action@v1' which is version 1 of thr docker build & push action where it will build our runner into an image and push the image into the repository.
+
+- Next is the 'with:' section were we put in the login credentials for our Docker Hub account, the destination of our repo, and any proper tags for Docker to recognize.
+
+- This requires your 'username:' which will then place '${{ secrets.name-of-username-secret}}' this will allocate your Action Secret from eariler that you labeled as your username for Docker Hub.
+
+- Next is the 'password:' which is again '${{ secrets.name-of-password-secret}}' which will utilize your password Action Secret. For this case, we can use either the login password or the more secure access key password.
+
+- Next is the 'repository:' where your 'env:' that was made at the start of our '.yml' file is placed. Coded as '${{ env.name-of-environment }}', this is the destination for your image.
+
+- Finally we end with our 'tags_with_ref:', in this case we put 'true'.
+
+- Your final '.yml' file should look something similar to this:
+
+![github-secrets-workflow.yml as shown in vs code](project6-22.png)
+
+- With this committed and pushed to your repo, head back to your repo, select actions, then select the workflow 'Publish Docker Image' and click on your push request (should be the same as your committ message).
 
 # Part 3
 
