@@ -93,4 +93,22 @@
 
 # Configuring GitHub secrets
 
+- Before we get into GitHub Actions and configuring workflows, we will need to set up some 'Action Secrets' for GitHub to encrypt and become available for later use in future workflow files.
+
+- Go to your repo on GitHub and click on 'Settings'.
+
+- Scroll down until you find a selection to the side called 'Secrets' and click on it.
+
+- This should take you to a menu called 'Action Secrets'. click on the 'New repository secret' button. Next you will be prompted to give the secret a name and then in the description, type in your secret (in this first case, the username to your Docker Hub account). Then click on 'add secret' to finish.
+
+![Action secrets page](project6-16.png)
+
+![New repository key creation page](project6-17.png)
+
+- Once you've made your first secret, repeat the previous steps twice to secure your Docker Hub login password and then a secret for the password to your Docker Hub Access Key.
+
+- With all this done, you should have a total of three (3) secrets encrypted.
+
 # Configure GitHub Workflow
+
+- Now with out secrets setup, let's move onto GitHub Actions and Workflows.
