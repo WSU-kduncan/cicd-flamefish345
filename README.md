@@ -155,9 +155,17 @@
 
 - Your final '.yml' file should look something similar to this:
 
-![github-secrets-workflow.yml as shown in vs code](project6-22.png)
+![github-secrets-workflow.yml as shown in vs code](project-screenshots/project6-22.png)
 
 - With this committed and pushed to your repo, head back to your repo, select actions, then select the workflow 'Publish Docker Image' and click on your push request (should be the same as your committ message).
+
+- Now you should be a section for your 'Push Docker Image' action. Click on the job that we named 'Push docker image to docker hub' and this should give a summary of each step in your workflow and all of the post processes after the action finishes.
+
+- Note: this may take a few seconds depending on your connection for the action to finish. There may also be a warning at the bottom of your job's screen saying that 'docker-build-push@v2' is available but that is fine for case.
+
+- We will now double check over on our Docker Hub repo to make sure that the new image was added:
+
+![Docker hub repo with new image created by git hub action](project-screenshots/project6-21.png)
 
 # Part 3
 
@@ -174,3 +182,18 @@
 ![Docker images with pushed image](project-screenshots/project6-23.png)
 
 # Running the container
+
+- We will run the docker image with 'docker run -dit -p 8080:80 name-of-docker-image'. This should, like eariler, output a container id.
+
+- To make sure it's running, we'll do a quick 'docker ps' should see that the container is running in the foreground and bound to port 80.
+
+![output from docker run command and 'docker ps'](project-screenshots/project6-19.png)
+
+- Now to show our container through the browser. Let's run a quick 'curl ipinfo.io' to get our Instance's public IPv4 address.
+
+![running 'curl ipinfo.io'](project-screenshots/project6-20.png)
+
+- Now go to your browser and type 'AWS-Instance-Public-IP:8080' in the address bar and hit enter. Your webpage should load as coded in 'index.html'.
+
+![browser running webpage from flamefish345/mywebsite image container](project-screenshots/project6-24.png)
+
